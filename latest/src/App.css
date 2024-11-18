@@ -1,6 +1,135 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  font-family: "Merriweather", serif;
+}
+
+.bg-blue {
+  background-color: rgb(45, 45, 166);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 1px 3px -2px black;
+
+
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo p {
+  color: black;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.nav-login-cart button {
+  padding: 8px 16px;
+  /* Adds padding inside the button */
+  border: none;
+  border-radius: 4px;
+  background-color: #acbed2;
+  /* Blue button color */
+  color: rgb(11, 9, 9);
+  cursor: pointer;
+}
+
+.nav-login-cart button:hover {
+  background-color: #187ae1;
+  /* Darker blue on hover */
+}
+
+.card-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #007bff;
+  /* Border color for the card */
+  border-radius: 8px;
+  /* Rounded corners for the card */
+  background-color: #ffffff;
+  /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Shadow for card effect */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+}
+
+.card-icon:hover {
+  background-color: #f1f1f1;
+  /* Light hover effect */
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+}
+
+.card-icon svg {
+  color: #007bff;
+  /* Icon color */
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff0000;
+  /* Red badge background */
+  color: white;
+  /* White text */
+  font-size: 12px;
+  /* Font size of the count */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  /* Circular badge */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.navbar ul hr {
+  height: 2px;
+  background-color: hsl(0, 93%, 40%);
+  margin: 10px 0;
+  color: #ff0000;
+  width: 75%
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: inherit;
 }
