@@ -8,31 +8,30 @@ let data_product=[
     name:"Women winter Jacket",
     image:p1_img,
     new_price:50.00,
-    old_Price:70.00
+    old_price:70.00,
   },
 
   {
-    id:1,
+    id:2,
     name:"Women winter Jacket",
     image:p2_img,
     new_price:50.00,
-    old_Price:70.00
+    old_price:78.00
   },
   {
-    id:1,
-    name:"Women winter Jacket",
+    id:3,
+    name:"men winter Jacket",
     image:p3_img,
-    new_price:50.00,
-    old_Price:70.00
+    new_price:55.00,
+    old_price:79.00
   },
   {
-    id:1,
-    name:"Women winter Jacket",
+    id:4,
+    name:"men winter Jacket",
     image:p4_img,
-    new_price:50.00,
-    old_Price:70.00
-  }
+    new_price:57.00,
+    old_price:76.00
+  },
   
-  
-
-]
+];
+export default data_product;

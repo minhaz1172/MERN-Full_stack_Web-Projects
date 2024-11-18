@@ -1,35 +1,66 @@
-import React, { useState } from 'react'
- import './Navbar.css'
- import { Link } from 'react-router-dom'; 
- import logo from '../Assets/e-logo.jpg';
- import { CiShoppingCart } from "react-icons/ci";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
+import logo from '../Assets/e-logo.jpg';
+import { CiShoppingCart } from 'react-icons/ci';
+
 function Navbar() {
-  const [menu,setMenu]=useState('Shop')
-  
   return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img src={logo} alt="Logo" width="40" height="40" className="me-2" />
+          <span>Shopper</span>
+        </Link>
 
-    <div className="navbar">
-      <div className="nav-logo">
-        <img src={logo} alt="Logo" width='10%' />
-        <p className='pt-3'>Shopper</p>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Shop
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/mens">
+                Men
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/womens">
+                Women
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/kids">
+                Kids
+              </Link>
+            </li>
+          </ul>
+          <div className="d-flex align-items-center">
+            <Link className="btn btn-outline-primary me-3" to="/login">
+              Log In
+            </Link>
+            <Link to="/cart" className="d-flex align-items-center">
+              <CiShoppingCart size={24} />
+              <span className="badge bg-secondary ms-1">0</span>
+            </Link>
+          </div>
+        </div>
       </div>
-       <ul className='nav-menu'>
-        <li  onClick={()=>{setMenu('Shop')}}><Link to = '/'>Shop</Link>{menu==='Shop'?<hr/>:<></>} </li>
-        <li onClick={()=>{setMenu('men')}}><Link to ='mens'>Men</Link>{menu==='men'?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu('women')}}><Link to ='womens'>WOMEN</Link>{menu==='women'?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu('kids')}}><Link to ='kids'>Kids</Link>{menu==='kids'?<hr/>:<></>}</li>
-       </ul>
-       <div className="nav-login-cart mr-4 ml-3">
-      <Link to ='/login'>  <button>LogIn</button> </Link>
-        <Link to='/cart'><div className="card-icon">
-          <CiShoppingCart size={24} />
-          <span className="cart-count">0</span> 
-        </div ></Link>
-
-       </div>
-       </div>
-        
-  )
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
