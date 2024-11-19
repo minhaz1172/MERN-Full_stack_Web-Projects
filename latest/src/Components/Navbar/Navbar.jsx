@@ -52,10 +52,11 @@ function Navbar() {
             <Link className="btn btn-outline-primary me-3" to="/login">
               Log In
             </Link>
-            <Link to="/cart" className="d-flex align-items-center">
-              <CiShoppingCart size={24} />
-              <span className="badge bg-secondary ms-1">0</span>
-            </Link>
+            <Link to="/cart" className="cart-link position-relative">
+  <CiShoppingCart size={32} className="cart-icon" />
+  <span className="cart-badge position-absolute">0</span>
+</Link>
+
           </div>
         </div>
       </div>

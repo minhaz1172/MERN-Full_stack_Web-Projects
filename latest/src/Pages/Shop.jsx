@@ -4,7 +4,7 @@ import Popular from '../Components/Popular/Popular';
 import Offer from '../Components/Offers/offer';
 import NewCollection from '../Components/NewCollection/NewCollection';
 import Newsletter from '../Components/Newsletter/Newsletter';
-import Footer from '../Components/Footer/Footer';
+
 
 function Shop() {
   return (
@@ -33,10 +33,6 @@ function Shop() {
         <Newsletter />
       </section>
 
-{/*footer section */}
-<section className='footer container'>
-      <Footer/>
-      </section>
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.productdisplay-price-old {
+  text-decoration: line-through;
+  color: #999;
+}
+.productdisplay{
+  display:flex;
+  margin: 0px 170px;
+}
+.productdisplay-left
+{
+  display:flex;
+  gap:17px;
+}
+.productdisplay-img-list
+{
+ display: flex; 
+ flex-direction: column;
+ gap:16px;
+}
+.productdisplay-main-img{
+  width: 546px;
+  height:700px;
+}
+.productdisplay-right
+{
+color:#3d3d3d;
+font-size: 40px;
+font-weight: 700;
+}
+.productdisplay-right-star
+{
+display:flex;
+align-items: center;
+margin-top: 13px;
+gap:5px;
+color:#1c1c1c;
+font-size:16px;
+}

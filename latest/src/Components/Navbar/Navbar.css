@@ -1,0 +1,24 @@
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none; /* Optional: Remove underline from the link */
+  color: inherit; /* Optional: Inherit text color */
+}
+
+.cart-icon {
+  font-size: 32px; /* Adjust size as needed */
+}
+
+.cart-badge {
+  top: -8px; /* Position the badge above the cart icon */
+  right: -8px; /* Position the badge to the right */
+  width: 20px; /* Width of the badge */
+  height: 20px; /* Height of the badge */
+  font-size: 12px; /* Adjust font size */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: red; /* Badge color */
+  color: white; /* Text color */
+  border-radius: 50%; /* Makes the badge round */
+}
