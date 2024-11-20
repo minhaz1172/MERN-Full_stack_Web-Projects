@@ -1,18 +1,21 @@
-import React from 'react';
-import './ProductDisplay.css';
-import { FaStar } from 'react-icons/fa6';
-import { FaRegStarHalfStroke } from 'react-icons/fa6';
-import { CiStar } from 'react-icons/ci';
+import React, { useContext } from "react";
+import "./ProductDisplay.css";
+import { FaStar } from "react-icons/fa6";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
+import { CiStar } from "react-icons/ci";
+import { ShopContext } from "../../Context/ShopContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
+  const { addToCart } = useContext(ShopContext);
+
   let tags = [];
-  if (product.category === 'men') {
-    tags = ['Men', 'Fashion', 'Luxury'];
-  } else if (product.category === 'women') {
-    tags = ['Women', 'Style', 'Elegance'];
-  } else if (product.category === 'kids') {
-    tags = ['Kids', 'Playful', 'Comfort'];
+  if (product.category === "men") {
+    tags = ["Men", "Fashion", "Luxury"];
+  } else if (product.category === "women") {
+    tags = ["Women", "Style", "Elegance"];
+  } else if (product.category === "kids") {
+    tags = ["Kids", "Playful", "Comfort"];
   }
 
   return (
@@ -43,10 +46,10 @@ const ProductDisplay = (props) => {
             <p className="ms-2 mb-0">(122)</p>
           </div>
           <div className="mt-3">
-            <div className="productdisplay-price-old text-muted" style={{ fontSize: '1.25rem' }}>
+            <div className="productdisplay-price-old text-muted" style={{ fontSize: "1.25rem" }}>
               ${product.old_price}
             </div>
-            <div className="text-success fw-bold" style={{ fontSize: '1.5rem' }}>
+            <div className="text-success fw-bold" style={{ fontSize: "1.5rem" }}>
               ${product.new_price}
             </div>
           </div>
@@ -63,10 +66,12 @@ const ProductDisplay = (props) => {
               <button className="btn btn-outline-primary">XXL</button>
             </div>
           </div>
-          <button className="btn btn-primary mt-4">ADD TO CART</button>
-         {/* Tags Section */}
-         <p className="mt-3">
-            Tags: <span>{tags.join(', ')}</span>
+          <button className="btn btn-primary mt-4" onClick={() => addToCart(product.id)}>
+            ADD TO CART
+          </button>
+          {/* Tags Section */}
+          <p className="mt-3">
+            Tags: <span>{tags.join(", ")}</span>
           </p>
         </div>
       </div>

@@ -24,9 +24,18 @@ function App() {
         <main className="container py-4">
           <Routes>
             <Route path="/" element={<Shop />} />
-            <Route path="/mens" element={<ShopCategory banner={menb} category="men" />} />
-            <Route path="/womens" element={<ShopCategory banner={womenb}category="women" />} />
-            <Route path="/kids" element={<ShopCategory banner={kidb} category="kids" />} />
+            <Route
+              path="/mens"
+              element={<ShopCategory banner={menb} category="men" />}
+            />
+            <Route
+              path="/womens"
+              element={<ShopCategory banner={womenb} category="women" />}
+            />
+            <Route
+              path="/kids"
+              element={<ShopCategory banner={kidb} category="kids" />}
+            />
             <Route path="/product" element={<Product />} />
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
@@ -34,11 +43,13 @@ function App() {
           </Routes>
         </main>
 
+        {/* Footer Section */}
+        <footer className="bg-dark text-light py-3">
+          <div className="container">
+            <Footer />
+          </div>
+        </footer>
       </BrowserRouter>
-      {/*footer section */}
-<section className='footer container'>
-   <Footer/>
-      </section>
     </div>
   );
 }

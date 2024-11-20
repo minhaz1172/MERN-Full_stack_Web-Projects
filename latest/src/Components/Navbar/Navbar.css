@@ -22,3 +22,9 @@
   color: white; /* Text color */
   border-radius: 50%; /* Makes the badge round */
 }
+div ul li:hover{
+            background-color: aqua;
+            border-radius: 7px;
+            transition: 0.5s ease;
+
+}
